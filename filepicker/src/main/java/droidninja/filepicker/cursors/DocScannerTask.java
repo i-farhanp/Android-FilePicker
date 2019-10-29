@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 
-import com.android.internal.util.Predicate;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import droidninja.filepicker.Predicate;
 import droidninja.filepicker.PickerManager;
 import droidninja.filepicker.cursors.loadercallbacks.FileMapResultCallback;
 import droidninja.filepicker.models.Document;
