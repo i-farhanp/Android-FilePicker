@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
-version = "2.1.6"
+version = "1.0.0"
 
 android {
     compileSdkVersion 28
@@ -26,15 +26,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
-    implementation  'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     api 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     testImplementation 'junit:junit:4.12'
 }
 
-def siteUrl = 'https://github.com/DroidNinja/Android-FilePicker'      // Homepage URL of the library
-def gitUrl = 'https://github.com/DroidNinja/Android-FilePicker.git'   // Git repository URL
-group = "com.droidninja"                                          // Maven Group ID for the artifact
+def siteUrl = 'https://github.com/ifarhanpatel/Android-FilePicker'      // Homepage URL of the library
+def gitUrl = 'https://github.com/ifarhanpatel/Android-FilePicker.git'   // Git repository URL
+group = "com.ifarhanpatel"                                          // Maven Group ID for the artifact
 
 install {
     repositories.mavenInstaller {
@@ -44,8 +44,8 @@ install {
                 packaging 'aar'
 
                 // Add your description here
-                name 'com.droidninja.filepicker'
-                description = 'Media and document picker'
+                name 'com.ifarhanpatel.filepicker'
+                description = 'Media and document picker with android sdk 28 version support'
                 url siteUrl
 
                 // Set your license
@@ -57,9 +57,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'droidninja'
-                        name 'Arun Sharma'
-                        email 'arun2007ind@gmail.com'
+                        id 'ifarhanpatel'
+                        name 'Farhan Patel'
+                        email 'ifarhanpatel@gmail.com'
                     }
                 }
                 scm {
@@ -101,15 +101,18 @@ bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
 
+    println 'user ' + user
+    println 'key ' + key
     configurations = ['archives']
     pkg {
         repo = "maven"
         // it is the name that appears in bintray when logged
-        name = "com.droidninja.filepicker" // TODO
+        name = "com.ifarhanpatel.filepicker"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
+        dryRun = false
         version {
             gpg {
                 sign = true //Determines whether to GPG sign the files. The default is false
