@@ -2,6 +2,11 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android--FilePicker-green.svg?style=true)](https://android-arsenal.com/details/1/4044)
  [ ![Latest Version](https://api.bintray.com/packages/droidninja/maven/com.droidninja.filepicker/images/download.svg) ](https://bintray.com/droidninja/maven/com.droidninja.filepicker/_latestVersion)
  
+ 
+ Fork of Android Filepicker by driodNinja
+ 
+ Created to add support to android SDK 28 without migrating to androidX.
+ 
 A filepicker which allows to select images and videos with flexibility. It also supports selection of files by specifying its file type. Check out app module for example.
 
   ![demo](https://image.ibb.co/iRpztv/device_2017_03_10_164003.png)
@@ -11,8 +16,18 @@ A filepicker which allows to select images and videos with flexibility. It also 
 # Installation
 
 * As of now, It is only available in jCenter(), So just put this in your app dependencies:
+
+```
+repositories {
+    maven {
+        url "http://dl.bintray.com/ifarhanpatel/maven"
+    }
+}
+```
 ```gradle
-    compile 'com.droidninja:filepicker:2.1.5'
+dependencies {
+    compile 'com.ifarhanpatel:filepicker:1.0.0'
+    }
 ```
 
 # Note
